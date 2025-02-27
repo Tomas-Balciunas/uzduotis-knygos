@@ -61,7 +61,7 @@ final class KnygaController extends AbstractController
 
         $this->addFlash('info', 'Knyga pašalinta.');
 
-        return $this->redirect($this->generateUrl('knygos'));
+        return $this->redirectToRoute('knygos');
     }
 
     #[Route('/{id}/redagavimas', name: 'redaguoti_knyga', methods: ['GET', 'POST'])]
@@ -76,7 +76,7 @@ final class KnygaController extends AbstractController
 
             $this->addFlash('info', 'Knygos informacija atnaujinta.');
 
-            return $this->redirect($this->generateUrl('knygos'));
+            return $this->redirectToRoute('knygos');
         }
 
         return $this->render('knygos/redaguoti.html.twig', [
