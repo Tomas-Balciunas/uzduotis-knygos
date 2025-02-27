@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ knyga.pavadinimas }}{% endblock %}
+
+{% block body %}
+<ul>
+    <li>{{ knyga.pavadinimas }}</li>
+    <li>Autorius: {{ knyga.autorius.vardas }}</li>
+    <li>Išleista: {{ knyga.isleidimoMetai|date("Y-m-d") }}</li>
+    <li>ISBN: {{ knyga.isbn }}</li>
+</ul>
+    <a href="{{ path('salinti_knyga', {'id': knyga.id}) }}" style="color: #AA3333">Pašalinti</a>
+    <a href="{{ path('redaguoti_knyga', {'id': knyga.id}) }}" style="color: #334faa">Redaguoti</a>
+{% endblock %}

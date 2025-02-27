@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Redaguoti {{ knyga.pavadinimas }}{% endblock %}
+
+{% block body %}
+    {{ form_start(redagavimoForma) }}
+    {{ form_errors(redagavimoForma) }}
+    {{ form_widget(redagavimoForma) }}
+    <button type="submit">Atnaujinti</button>
+    {{ form_end(redagavimoForma) }}
+{% endblock %}

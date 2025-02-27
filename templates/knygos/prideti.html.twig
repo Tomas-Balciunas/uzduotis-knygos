@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pridėti knygą{% endblock %}
+
+{% block body %}
+    {{ form_start(knygosForma) }}
+    {{ form_errors(knygosForma) }}
+    {{ form_widget(knygosForma) }}
+    <button type="submit">Pridėti</button>
+    {{ form_end(knygosForma) }}
+{% endblock %}

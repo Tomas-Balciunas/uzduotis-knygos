@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Visos knygos{% endblock %}
+
+{% block body %}
+    {% if knygos %}
+    <ul>
+        {% for knyga in knygos %}
+            <li><a href="{{ path('knyga', {'id': knyga.id}) }}">{{ knyga.pavadinimas }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <h3>Knygų nerasta</h3>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,7 @@
+{% for label, messages in app.flashes %}
+    {% for message in messages %}
+        {% if label is same as 'info' %}
+            <p style="color: #25cc20">{{ message }}</p>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
